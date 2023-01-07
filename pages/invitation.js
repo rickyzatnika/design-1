@@ -19,7 +19,7 @@ import axios from "axios";
 const Invitation = (props) => {
   async function addHandler(enteredMeetupData) {
     const response = await fetch(
-      "https://sample-wedding.vercel.app/api/comments",
+      "https://wedding-first.vercel.app/api/comments",
       {
         method: "POST",
         body: JSON.stringify(enteredMeetupData),
@@ -90,7 +90,7 @@ const Invitation = (props) => {
       <Introduce />
       <SaveTheDate />
       <OurStory />
-      <form onSubmit={saveUser}>
+      {/* <form onSubmit={saveUser}>
         <div className="w-4/6 px-20 space-y-4">
           <div>
             <label className="block mb-2 text-lg font-medium ">Hadir</label>
@@ -116,7 +116,7 @@ const Invitation = (props) => {
             Simpan
           </button>
         </div>
-      </form>
+      </form> */}
       <CommentsForm addHandler={addHandler} meetups={props.meetups} />
     </>
   );
